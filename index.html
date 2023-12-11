@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: rgb(31, 30, 30);">
+    <div class="master-div">
+        <input class="inp" type="text" id="input"><br>
+        <button class="bot" onclick="btn()">Click</button>
+        <div class="main-div" id="show"></div>
+    </div>
+
+    <script>
+        function btn() {
+            var input = document.getElementById("input");
+
+            if (input.value === "") {
+                show.innerHTML = "pls input a number"
+                console.log("Input a number");
+            } else if (input.value % 3 === 0 && input.value % 5 === 0) {
+                show.innerHTML = "FizzBuzz"
+                console.log("FizzBuzz");
+            } else if (input.value % 3 === 0) {
+                show.innerHTML = "Buzz"
+                console.log("Buzz");
+            } else if (input.value % 5 === 0) {
+                show.innerHTML = "Fizz"
+                console.log("Fizz");
+            }
+        }
+    </script>
+</body>
+</html>
